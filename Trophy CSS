@@ -1,0 +1,135 @@
+.charsheet {
+    width:900px;
+    max-height:710px;
+    background:#d0c8b0;
+}
+
+.sheet-header {
+	background-color: #000;
+	color: #fff;
+	padding: 2px 0px;
+	vertical-align: middle;
+	line-height: 100%;
+	height: 2px;
+	line-height: 10px;
+	font-size: 1.1em;
+	margin: 3px 0px;
+	box-align: center;
+	border-radius: 4px;
+	padding: 2px 2px 2px 8px;
+}
+
+.sheet-reminder_text {
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.reminder_text {
+    text-decoration: ;;
+}
+
+.sheet-col {
+    padding:5px;
+}
+
+.sheet-input[type="textarea"] {
+    visibility: hidden;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake radio/checkbox */
+input[type="radio"] + span::before,
+input[type="checkbox"] + span::before {
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 2px #ccc;
+    background: #f6f6f6;
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Fake radio */
+input[type="radio"] + span::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + span::before {
+    content: "•";
+}
+
+/* Fake checkbox */
+input[type="checkbox"] + span::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]:checked + span::before {
+    content: "X";
+}
+
+/* Hide actual radio */
+input[type="radio" class="attr_r"] {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake radio */
+input[type="radio"] + span::before {
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 2px #ccc;
+    background: #f6f6f6;
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+    content: "•";
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+/* Remove dot from all radios _after_ selected one */
+input[type="radio"]:checked ~ input[type="radio"] + span::before {    
+    content: "";
+}
