@@ -46,7 +46,137 @@
     width: 16px;
     height: 16px;
     position: relative;
+    top: 5px;.charsheet {
+    width:900px;
+    max-height:720px;
+    background:#d0c8b0;
+}
+
+.sheet-header {
+	background-color: #000;
+	color: #fff;
+	padding: 2px 0px;
+	vertical-align: middle;
+	line-height: 100%;
+	height: 2px;
+	line-height: 10px;
+	font-size: 1.1em;
+	margin: 3px 0px;
+	box-align: center;
+	border-radius: 4px;
+	padding: 2px 2px 2px 8px;
+}
+.sheet-norm_text {
+    font-family:"Times New Roman", Times, serif;
+}
+.sheet-reminder_text {
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.reminder_text {
+    text-decoration: ;;
+}
+.h4 {
+    font-family:"Times New Roman", Times, serif;
+}
+
+.h3 {
+   font-family:"Times New Roman", Times, serif; 
+}
+.sheet-col {
+    padding:5px;
+}
+
+.sheet-input[type="textarea"] {
+    visibility: hidden;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
     top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake radio/checkbox */
+input[type="radio"] + span::before,
+input[type="checkbox"] + span::before {
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 0 0 2px #ccc;
+    background: #f6f6f6;
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Fake radio */
+input[type="radio"] + span::before {
+    content: url("https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy-Diamond.png");
+     border: none;
+  background: none;
+}
+
+input[type="radio"]:checked + span::before {
+    content: url("https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy-Diamond%20filled.png");
+}
+
+/* Fake checkbox */
+input[type="checkbox"] + span::before {
+    content: url("https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy-Diamond.png");
+     border: none;
+  background: none;
+}
+
+input[type="checkbox"]:checked + span::before {
+    content: url("https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy-Diamond%20filled.png");
+}
+
+/* Hide actual radio */
+input[type="radio"] {
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Ruin Boxes */
+input[name="attr_r"] + span::before{
+   content: url(https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy%20ruin%20line%20.png)
+   
+}
+
+/* Ruin box checked */
+input[name="attr_r"]:checked + span::before{
+   content: url(https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Ruiin%20Trophyr.png);
+       border: none;
+ background: none;
+}
+/* Remove dot from all radios _after_ selected one */
+input[name="attr_r"]:checked ~ input[name="attr_r"] + span::before {    
+    content: "";
+}
     left: 6px;
     margin: -10px;
     cursor: pointer;
