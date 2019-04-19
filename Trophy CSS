@@ -1,6 +1,6 @@
 .charsheet {
     width:900px;
-    max-height:710px;
+    max-height:720px;
     background:#d0c8b0;
 }
 
@@ -18,7 +18,9 @@
 	border-radius: 4px;
 	padding: 2px 2px 2px 8px;
 }
-
+.sheet-norm_text {
+    font-family:"Times New Roman", Times, serif;
+}
 .sheet-reminder_text {
     font-style: italic;
     font-family: "Times New Roman", Times, serif;
@@ -27,7 +29,13 @@
 .reminder_text {
     text-decoration: ;;
 }
+.h4 {
+    font-family:"Times New Roman", Times, serif;
+}
 
+.h3 {
+   font-family:"Times New Roman", Times, serif; 
+}
 .sheet-col {
     padding:5px;
 }
@@ -99,7 +107,7 @@ input[type="checkbox"]:checked + span::before {
 }
 
 /* Hide actual radio */
-input[type="radio" class="attr_r"] {
+input[type="radio"] {
     opacity: 0;
     width: 16px;
     height: 16px;
@@ -112,7 +120,7 @@ input[type="radio" class="attr_r"] {
 }
 
 /* Fake radio */
-input[type="radio"] + span::before {
+input[name="attr_r"] + span::before{
     margin-right: 4px;
     border: solid 1px #a8a8a8;
     line-height: 14px;
@@ -130,6 +138,6 @@ input[type="radio"] + span::before {
 }
 
 /* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before {    
+input[name="attr_r"]:checked ~ input[name="attr_r"] + span::before {    
     content: "";
 }
