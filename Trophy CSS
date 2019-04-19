@@ -1,3 +1,9 @@
+input[name="attr_r"] {
+    min-height: 58px;
+    min-width: 70px;
+}
+
+
 .charsheet {
     width:900px;
     max-height:720px;
@@ -164,8 +170,9 @@ input[type="radio"] {
 
 /* Ruin Boxes */
 input[name="attr_r"] + span::before{
-   content: url(https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy%20ruin%20linedarklrg%20.png)
-   
+   content: url(https://raw.githubusercontent.com/EvanBuchh/Roll20gifs/master/Trophy%20ruin%20linedarklrg%20.png);
+   position:relative;
+   right:70px;
 }
 
 /* Ruin box checked */
